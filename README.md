@@ -1,6 +1,6 @@
 # Ghost Field Exfiltration (GFE)
 
-> **Can AI agents be tricked into leaking your personal data through invisible form fields?**
+> **Can LLM-based browser be tricked into leaking your personal data through invisible form fields?**
 
 This repository contains the dataset, analysis scripts, and results for a controlled security study evaluating the susceptibility of three Claude models — **Haiku 4.5**, **Sonnet 4.6**, and **Opus 4.6** — to Ghost Field Exfiltration attacks.
 
