@@ -307,6 +307,29 @@ plt.savefig(f"{OUTPUT_DIR}/fig5_attack_by_prompt.png", dpi=150, bbox_inches="tig
 print(f"[✓] {OUTPUT_DIR}/fig5_attack_by_prompt.png")
 plt.close()
 
+# Fig 5b — apenas o gráfico de porcentagem (Full Exfiltration Rate)
+fig5b, ax = plt.subplots(figsize=(8, 6))
+
+for i, model in enumerate(MODELS):
+    bars = ax.bar(x + i * width, exfil_prompt[model], width,
+                  label=model, color=MODEL_COLOR[model], alpha=0.88, edgecolor="white")
+    for bar in bars:
+        h = bar.get_height()
+        ax.text(bar.get_x() + bar.get_width() / 2, h + 0.5, f"{h:.0f}%",
+                ha="center", va="bottom", fontsize=8)
+
+ax.set_xticks(x + width)
+ax.set_xticklabels(exfil_prompt.index, fontsize=11)
+ax.set_ylabel("Full exfiltration rate (%)", fontsize=10)
+ax.set_ylim(0, 100)
+ax.legend(fontsize=9)
+ax.grid(axis="y", alpha=0.3)
+
+plt.tight_layout()
+plt.savefig(f"{OUTPUT_DIR}/fig5b_exfil_rate_by_prompt.png", dpi=150, bbox_inches="tight")
+print(f"[✓] {OUTPUT_DIR}/fig5b_exfil_rate_by_prompt.png")
+plt.close()
+
 # ─────────────────────────────────────────────
 #  FIG 6 — Heatmap: STATUS × PII per model (count)
 # ─────────────────────────────────────────────
