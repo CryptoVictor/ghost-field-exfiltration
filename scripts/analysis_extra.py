@@ -17,15 +17,17 @@ from matplotlib.colors import LinearSegmentedColormap
 
 warnings.filterwarnings("ignore")
 
-OUTPUT_DIR = "analise_graficos"
+OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "..", "charts")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
 
 # ─────────────────────────────────────────────
 #  SHARED SETUP
 # ─────────────────────────────────────────────
-haiku  = pd.read_csv("dataset_haiku 4.5.csv")
-sonnet = pd.read_csv("dataset_sonnet 4.6.csv")
-opus   = pd.read_csv("dataset_opus 4.6.csv")
+haiku  = pd.read_csv(os.path.join(DATA_DIR, "dataset_haiku_4.5.csv"))
+sonnet = pd.read_csv(os.path.join(DATA_DIR, "dataset_sonnet_4.6.csv"))
+opus   = pd.read_csv(os.path.join(DATA_DIR, "dataset_opus_4.6.csv"))
 
 haiku["MODELO"]  = "Haiku 4.5"
 sonnet["MODELO"] = "Sonnet 4.6"
@@ -477,8 +479,8 @@ handles = [mpatches.Patch(color=FIG19_COLOR[s], label=s) for s in STATUS_ALL if 
 fig19.legend(handles=handles, loc="lower center", ncol=4, fontsize=9,
              bbox_to_anchor=(0.5, -0.03))
 plt.tight_layout()
-plt.savefig(f"{OUTPUT_DIR}/fig19_extrafiltrado_attack.png", dpi=150, bbox_inches="tight")
-print("[✓] fig19_extrafiltrado_attack.png")
+plt.savefig(f"{OUTPUT_DIR}/fig19_extrafiltered_attack.png", dpi=150, bbox_inches="tight")
+print("[✓] fig19_extrafiltered_attack.png")
 plt.close()
 
 

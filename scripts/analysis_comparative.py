@@ -24,15 +24,17 @@ import numpy as np
 import warnings
 warnings.filterwarnings("ignore")
 
-OUTPUT_DIR = "analise_graficos"
+OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "..", "charts")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
 
 # ─────────────────────────────────────────────
 #  1. DATA LOADING
 # ─────────────────────────────────────────────
-haiku  = pd.read_csv("dataset_haiku 4.5.csv")
-sonnet = pd.read_csv("dataset_sonnet 4.6.csv")
-opus   = pd.read_csv("dataset_opus 4.6.csv")
+haiku  = pd.read_csv(os.path.join(DATA_DIR, "dataset_haiku_4.5.csv"))
+sonnet = pd.read_csv(os.path.join(DATA_DIR, "dataset_sonnet_4.6.csv"))
+opus   = pd.read_csv(os.path.join(DATA_DIR, "dataset_opus_4.6.csv"))
 
 haiku["MODELO"]  = "Haiku 4.5"
 sonnet["MODELO"] = "Sonnet 4.6"
@@ -402,8 +404,8 @@ legend_handles = [mpatches.Patch(color=STATUS_COLOR[s], label=s) for s in STATUS
 fig7.legend(handles=legend_handles, loc="lower center", ncol=4, fontsize=9,
             bbox_to_anchor=(0.5, -0.08), framealpha=0.9)
 plt.tight_layout()
-plt.savefig(f"{OUTPUT_DIR}/fig7_extrafiltrado_attack_impact.png", dpi=150, bbox_inches="tight")
-print(f"[✓] {OUTPUT_DIR}/fig7_extrafiltrado_attack_impact.png")
+plt.savefig(f"{OUTPUT_DIR}/fig7_extrafiltered_attack_impact.png", dpi=150, bbox_inches="tight")
+print(f"[✓] {OUTPUT_DIR}/fig7_extrafiltered_attack_impact.png")
 plt.close()
 
 # ─────────────────────────────────────────────

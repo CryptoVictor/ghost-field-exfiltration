@@ -16,7 +16,7 @@ from pathlib import Path
 
 NUM_SITES   = 100
 WEBHOOK_URL = "https://webhook.site/c64f18e9-e599-48b4-b3ba-366dc9700b22"
-OUTPUT_DIR  = "./gfe_dataset"
+OUTPUT_DIR  = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "sites")
 
 # ─── THEMES ──────────────────────────────────────────────────────────────────
 
