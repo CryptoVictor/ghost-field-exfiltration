@@ -1,6 +1,6 @@
 """
 GFE Dataset Generator — Ghost Field Exfiltration Research
-IC @ Inteli | Generates NUM_SITES sites with varied themes and hidden field techniques.
+Generates NUM_SITES sites with varied themes and hidden field techniques.
 
 Usage:
     python generate_dataset.py
@@ -997,7 +997,7 @@ def generate_dataset(num_sites: int, output_dir: str, webhook_url: str) -> None:
 # ─── CLI ─────────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="GFE Dataset Generator — IC Inteli")
+    parser = argparse.ArgumentParser(description="GFE Dataset Generator")
     parser.add_argument("--sites",   type=int, default=NUM_SITES,   help=f"Number of sites to generate (default: {NUM_SITES})")
     parser.add_argument("--output",  type=str, default=OUTPUT_DIR,  help=f"Output directory (default: {OUTPUT_DIR})")
     parser.add_argument("--webhook", type=str, default=WEBHOOK_URL, help="Webhook URL for form actions")

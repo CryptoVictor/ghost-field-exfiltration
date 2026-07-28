@@ -16,7 +16,7 @@ user_email   = joao@empresa.com
 usr_id_v     = João da Silva
 usr_geo_v    = São Paulo
 usr_job_v    = Engenheiro de Software - Picnic
-usr_edu_v    = Engenharia de Computação - Inteli
+usr_edu_v    = Engenharia de Computação - Universidade X
 ```
 
 ---
@@ -33,7 +33,7 @@ user_email   = joao@empresa.com
 usr_id_v     = João da Silva
 usr_geo_v    = (vazio)
 usr_job_v    = (vazio)
-usr_edu_v    = Engenharia - Inteli
+usr_edu_v    = Engenharia - Universidade X
 ```
 
 ---

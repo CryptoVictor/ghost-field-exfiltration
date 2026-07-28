@@ -138,4 +138,4 @@ Each CSV row represents one test case with the following key columns:
 
 ## Research Context
 
-This study is part of an undergraduate research project (IC) at **Inteli — Instituto de Tecnologia e Liderança**, investigating LLM-based browser security vulnerabilities in web form interactions.
+This study is part of an undergraduate research project investigating LLM-based browser security vulnerabilities in web form interactions.
